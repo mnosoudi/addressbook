@@ -19,9 +19,9 @@ public class Contact implements Serializable, Cloneable {
 
     private String firstName = "";
     private String lastName = "";
-    private String phone = "";
-    private String email = "";
-    private Date birthDate;
+    private Date startDate ;
+    private Date expectedEndDate ;
+    private String task;
 
     public Long getId() {
         return id;
@@ -47,28 +47,29 @@ public class Contact implements Serializable, Cloneable {
         this.lastName = lastName;
     }
 
-    public String getPhone() {
-        return phone;
+
+    public String getTask() {
+        return task;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTask(String task) {
+        this.task = task;
     }
 
-    public String getEmail() {
-        return email;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setStartDate(Date sartDate) {
+        this.startDate = sartDate;
+    }
+    
+    public Date getExpectedEndDate() {
+        return expectedEndDate;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
+    public void setExpectedEndDate(Date expectedEndDate) {
+        this.expectedEndDate = expectedEndDate;
     }
 
     @Override
@@ -83,8 +84,8 @@ public class Contact implements Serializable, Cloneable {
     @Override
     public String toString() {
         return "Contact{" + "id=" + id + ", firstName=" + firstName
-                + ", lastName=" + lastName + ", phone=" + phone + ", email="
-                + email + ", birthDate=" + birthDate + '}';
+                + ", lastName=" + lastName + ", Task=" + task + ", StartDate=" + startDate + ", EndDate="
+                + expectedEndDate +  '}';
     }
 
 }
