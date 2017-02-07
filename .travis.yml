@@ -1,5 +1,5 @@
 language: java
-install:
+install: 
 -mvn install
 jdk:
--oracle:jdk8
+-oraclejdk8
