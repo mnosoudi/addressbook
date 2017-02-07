@@ -1,5 +1,13 @@
 language: java
-install: 
+install:
 - mvn install
 jdk:
 - oraclejdk8
+deploy:
+  provider: heroku
+  api_key:
+    secure: BqjI0YWcR8x1PlJu9T1yf3MEzrTnHKIH5T6wJv++vtjaB82m6ymXvBJurRJRJ7NU+Ia7DEyVSteEIuiIZBWPNzOfZIE+47oLbPXyFv7GAk/U17EINE+4tElO7Azk5HjhcPWPkr61+oM5rSy7/jV+amqbxy5Vw2TTfFPy7xfrQsDMFyFX1qTKMqCrais0TFoXGMLquhmPiXNZdUCSTaC6/w12PDDPAL/G9x91bu1ZC5JRbP+XwffRGFfZ7dCDht2bjD8S6rhyKIo1Kr5n50MJ3V02Su0pbbL8t85hd9GU85lSoh1w/UyEMrZu5/VmtkS0E33JhZbXjQBh8/3bRbcyP1aG4eiR7YwBcOuetx1BUE5AvFjP8wAF5ahngu0j4apm2OWgcP7tLE/S08uznpaq2TeCPzce96z48e0g2gdGmj+Ebnw5gY3Uk7cVecBwSSJdixipFhxcuzEINjszVOLvsjld1NjKJpsdGNXJb34pZUoYVvPT8ozJzG1BSjGua5taDYw8HHNEiDYWaElPM4Zq36wFIQPKqQJtM+alfm20JNe0RMuxnLh4wgtBEFZrp9TBA4p9vesJk1YNfusT3VD8I4H/ZcVqkXiOF2RCI7CGx5LSeJ0vZ+fPOGxIJEcYBRMkiv+Pa69+xk8RBZBYYcPjg13yvg2lR8j5LfP3HVa4Kl0=
+  app: mnosoudi-addressbook
+  on:
+    repo: mnosoudi/addressbook
+    branch: todo_tasks
